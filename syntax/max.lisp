@@ -1,0 +1,7 @@
+(define (max a b c)
+	(cond	((and (> a b) (> a c)) a)
+			((and (> b a) (> b c)) b)
+			((and (> c a) (> c b)) c)
+			((or (and (>= a b) (> a c)) (and (>= a c) (> a b))) a)
+			((or (and (>= b a) (> b c)) (and (>= b c) (> b b))) b)
+			(else c)))
